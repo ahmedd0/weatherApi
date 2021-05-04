@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.page {
+    color: white;
+    background-color: orange;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 100vh 100vh auto;
+    gap: 10px;
+    grid-template-areas: "hd hd hd hd hd hd hd hd hd hd"
+        "sd sd sd sec sec sec sec sec sec sec"
+        "foot foot foot foot foot foot foot foot foot foot ";
+
+}
+
+.page .child {
+    background-color: salmon;
+}
+
+.page header {
+    background-color: red !important;
+    grid-area: hd;
+    background: url(../images/slideshow-1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.page aside {
+    grid-area: sd;
+    background-color: green !important;
+}
+
+.page section {
+    grid-area: sec;
+    background-color: #eee !important;
+}
+
+.page footer {
+    grid-area: foot;
+    background-color: black !important;
+    text-align: center;
+    padding: 20px 0;
+}

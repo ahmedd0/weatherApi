@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Ahmed Abdelhady">
+  <meta name="description" content="API weather application">
+  <meta name="keywords" content="API, Weather app , bootstrap , JSON , fetch">
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <title>Weather Api</title>
+</head>
+
+<body>
+  <header id="header" class="d-flex justify-content-center align-items-center">
+    <!-- START NAVBAR -->
+    <div class="navbar position-fixed" id="nav">
+      <nav class="py-5 px-3 h-100 ">
+        <div class="logo d-flex align-items-center ">
+          <a href=""><img src="images/logo.png" alt="weather logo"></a>
+
+          <a href="index.html" class="text-white pl-3 "> Weather</a>
+        </div>
+        <ul class="nav-list mt-5 list-unstyled">
+          <li><a href="" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="" class="text-white text-decoration-none">News</a></li>
+          <li><a href="" class="text-white text-decoration-none">Live cameras</a></li>
+          <li><a href="" class="text-white text-decoration-none">Photos</a></li>
+          <li><a href="" class="text-white text-decoration-none">Contact</a></li>
+
+
+        </ul>
+        <div class="close-icon position-absolute">
+          <i class="far fa-times-circle text-white-50" id="close"></i>
+        </div>
+      </nav>
+    </div>
+
+
+    <!-- END NAVBAR -->
+    <div class="header-wrapper w-100  py-5 overlay position-relative">
+
+      <div class="menu-icon position-absolute" id="menu">
+        <i class="fa fa-bars text-white"></i>
+      </div>
+      <div class="weather py-5">
+        <div class="container">
+          <div class="row" id="items">
+            <div class="col-md-4 mb-3">
+              <div class="item today">
+                <div class="card text-white bg-main border-0">
+                  <div class="card-header bg-info text-center d-flex justify-content-between align-items-center">
+                    <div class="day"></div>
+                    <div class="date"></div>
+                  </div>
+                  <div class="card-body">
+                    <h6 class="card-title location"></h6>
+                    <div class="d-flex justify-content-between">
+                      <h2 class="card-text temperature">
+
+                      </h2>
+                      <img class="forcast-icon" src="" alt="forcast image status">
+
+
+                    </div>
+                    <div>
+                      <span class="condition-text"></span>
+                    </div>
+                    <div class="mt-3 d-flex">
+                      <div class="mr-4">
+                        <span><img src="images/icon-umberella.png" alt="umberella humidity icon"></span>
+                        <span class="humidity"></span>
+                      </div>
+                      <div class="mr-4">
+                        <span><img src="images/icon-wind.png" alt="wind speed icon"></span>
+                        <span class="wind-speed "></span>
+                      </div>
+                      <div class="compass mr-4">
+                        <span><img src="images/icon-compass.png" alt="compass icon"></span>
+                        <span>East</span>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="item">
+                <div class="card text-white bg-main border-0">
+                  <div class="card-header bg-info text-center d-flex justify-content-between align-items-center">
+                    <div class="day"></div>
+                    <div class="date"></div>
+                  </div>
+                  <div class="card-body">
+                    <h6 class="card-title location"></h6>
+                    <div class="d-flex justify-content-between">
+                      <h2 class="card-text temperature">
+                      </h2>
+                      <img class="forcast-icon" src="" alt="forcast image status">
+
+
+                    </div>
+                    <div>
+                      <span class="condition-text"></span>
+                    </div>
+                    <div class="mt-3 d-flex">
+                      <div class="mr-4">
+                        <span><img src="images/icon-umberella.png" alt="umberella humidity icon"></span>
+                        <span class="humidity"></span>
+                      </div>
+                      <div class="mr-4">
+                        <span><img src="images/icon-wind.png" alt="wind speed icon"></span>
+                        <span class="wind-speed "></span>
+                      </div>
+                      <div class="compass mr-4">
+                        <span><img src="images/icon-compass.png" alt="compass icon"></span>
+                        <span>East</span>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="item ">
+                <div class="card text-white bg-main border-0">
+                  <div class="card-header bg-info text-center d-flex justify-content-between align-items-center">
+                    <div class="day"></div>
+                    <div class="date"></div>
+                  </div>
+                  <div class="card-body">
+                    <h6 class="card-title location"></h6>
+                    <div class="d-flex justify-content-between">
+                      <h2 class="card-text temperature">
+                      </h2>
+                      <img class="forcast-icon" src="" alt="forcast image status">
+
+
+                    </div>
+                    <div>
+                      <span class="condition-text"></span>
+                    </div>
+                    <div class="mt-3 d-flex">
+                      <div class="mr-4">
+                        <span><img src="images/icon-umberella.png" alt="umberella humidity icon"></span>
+                        <span class="humidity"></span>
+                      </div>
+                      <div class="mr-4">
+                        <span><img src="images/icon-wind.png" alt="wind speed icon"></span>
+                        <span class="wind-speed "></span>
+                      </div>
+                      <div class="compass mr-4">
+                        <span><img src="images/icon-compass.png" alt="compass icon"></span>
+                        <span>East</span>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>
+      <!-- START SEARCH BOX -->
+      <div class="search-box">
+        <div class="container">
+          <div class="form-group w-50 m-auto">
+            <input type="text" name="searchKey" id="searchInput" class="form-control"
+              placeholder="ex : cairo , alexandria , etc" aria-describedby="helpId">
+          </div>
+        </div>
+
+      </div>
+      <!-- END SEARCH BOX -->
+
+    </div>
+  </header>
+  <script src="js/jquery-3.5.1.slim.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

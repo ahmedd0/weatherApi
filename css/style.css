@@ -1,0 +1,100 @@
+/* Reset  */
+input,
+button {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.bg-main {
+    background-color: #22222363;
+}
+
+.overlay {
+    background: linear-gradient(360deg, #060202cc, #007bffa3)
+}
+
+
+
+/* Reset */
+/* START HEADER */
+header {
+    background: url(../images/france.svg);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+header .menu-icon {
+    left: 20px;
+    top: 20px;
+    background: #111a2b;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+
+
+header .header-wrapper {
+    min-height: 100vh;
+}
+
+header .navbar {
+    left: -100%;
+    top: 0;
+    z-index: 5000;
+    height: 100%;
+    width: 100%;
+    z-index: 555;
+    transition: all 0.3s ease;
+
+}
+
+header nav {
+    transition: all 0.3s ease;
+    background: #111828;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 330px !important;
+}
+
+header nav ul.nav-list li:not(li:last-child) {
+    border-bottom: 1px dotted white;
+}
+
+header nav ul.nav-list li {
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+header nav .close-icon {
+    right: 10px;
+    top: 10px;
+    font-size: 25px;
+}
+
+header .today {
+    background-color: #000000a6;
+}
+
+header h2 {
+    font-size: 45px;
+}
+
+header span {
+    font-size: 12px;
+}
+
+header nav .close-icon i {
+    cursor: pointer;
+}
+
+/* END HEADER */
