@@ -10,7 +10,8 @@ let forcastIconElements = document.getElementsByClassName("forcast-icon");
 let conditionTextElements = document.getElementsByClassName("condition-text");
 let humidityElements = document.getElementsByClassName("humidity");
 let windSpeedElments = document.getElementsByClassName("wind-speed");
-
+let minTemp = document.getElementsByClassName("min-temp");
+let windDirectionElms = document.getElementsByClassName("wind-direction");
 // -------------------------- OPEN AND CLOSE NAVBAR
 function openNavbar() {
   navbar.style.cssText = "left:0 !important";
@@ -43,6 +44,8 @@ async function getCityWeather(cityName) {
 //---------------- Display all Required Data
 function displayResult(cityLocation, response) {
   let forecastArr = [];
+  let windHour;
+
   cityLocation = response.location.name;
   forecastArr.push(...response.forecast.forecastday);
 
@@ -55,11 +58,17 @@ function displayResult(cityLocation, response) {
       new Date(forecastArr[i].date).toLocaleString("default", {
         month: "long",
       });
-    temElements[i].innerHTML = forecastArr[i].day.maxtemp_c + " <sup>o</sup>C";
+    temElements[i].innerHTML =
+      Math.round(forecastArr[i].day.maxtemp_c) + " <sup>o</sup>C";
+    minTemp[i].innerHTML =
+      Math.round(forecastArr[i].day.mintemp_c) + " <sup>o</sup>C";
     forcastIconElements[i].src = forecastArr[i].day.condition.icon;
     conditionTextElements[i].innerHTML = forecastArr[i].day.condition.text;
     humidityElements[i].innerHTML = forecastArr[i].day.avghumidity + " %";
     windSpeedElments[i].innerHTML = forecastArr[i].day.avgvis_km + " km/hr";
+    windHour = new Date(forecastArr[i].date);
+    windDirectionElms[i].innerHTML =
+      forecastArr[i].hour[windHour.getHours()].wind_dir;
   }
 }
 function getDayName(dateFormat) {
